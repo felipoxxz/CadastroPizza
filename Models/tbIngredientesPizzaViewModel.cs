@@ -3,9 +3,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CadastroPizza.Models
 {
-    public class tbIngredientesPizzaViewModel : PadraoViewModel
+    public class tbIngredientesPizzaViewModel : BaseViewModel
     {
-        [Required] public int pizzaId { get; set; }
+        public int pizzaId { get; set; }
+        [Required(ErrorMessage = "A descrição do ingrediente é obrigatório")]
         public string descricao { get; set; }
     }
 }

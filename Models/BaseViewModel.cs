@@ -2,7 +2,7 @@
 
 namespace CadastroPizza.Models
 {
-    public class PadraoViewModel
+    public class BaseViewModel
     {
         [Required] public int id { get; set; }
     }

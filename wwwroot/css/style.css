@@ -1,0 +1,47 @@
+﻿/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3e5ab;
+    color: #333;
+}
+
+/* Container principal */
+.container {
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a apresentação */
+.intro {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Estilos para a imagem clicável */
+.pizza-image {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+    .pizza-image:hover {
+        transform: scale(1.05);
+    }
+
+/* Link para a página de pizzas */
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model tbPizzaViewModel
+
+<h2>Cadastro de Pizza</h2>
+<form asp-action="Save" method="post" class="form">
+    <div class="form-group">
+        <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
+        <label asp-for="id" class="control-label">Id da Pizza</label>
+        <input asp-for="id" class="form-control" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="descricao" class="control-label">Descrição da Pizza</label>
+        <input asp-for="descricao" class="form-control" />
+    </div>
+    <span asp-validation-for="descricao" class="text-danger"></span>
+    <button type="submit" class="btn btn-primary">Salvar dados</button>
+    <br />
+    <span class="text-danger">@ViewBag.Erro</span>
+</form>

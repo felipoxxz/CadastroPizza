@@ -4,20 +4,20 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CadastroPizza.Controllers
 {
-    public class PizzaController : BaseController<tbPizzaViewModel>
+    public class IngredientesPizzaController : BaseController<tbIngredientesPizzaViewModel>
     {
-        public PizzaController()
+        public IngredientesPizzaController()
         {
-            DAO = new PizzaDAO();
+            DAO = new IngredientesPizzaDAO();
             GeraProximoId = true;
         }
 
-        protected override void ValidaDados(tbPizzaViewModel model, string operacao)
+        protected override void ValidaDados(tbIngredientesPizzaViewModel model, string operacao)
         {
             base.ValidaDados(model, operacao);
             if (string.IsNullOrEmpty(model.descricao))
             {
-                ModelState.AddModelError("descricao", "Preencha a decrição da pizza");
+                ModelState.AddModelError("descricao", "A Descrição do ingrediente é obrigatória");
             }
         }
 
